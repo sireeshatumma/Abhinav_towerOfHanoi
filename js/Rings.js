@@ -31,9 +31,9 @@ class Rings{
     }
     destroySprites(){
         moves=0;
-        this.destroyArray(line1Array);
-        this.destroyArray(line2Array);
-        this.destroyArray(line3Array);
+        line1Array=this.destroyArray(line1Array);
+        line2Array=this.destroyArray(line2Array);
+        line3Array=this.destroyArray(line3Array);
     }
     destroyArray(array){
         if(array.length!=0){
@@ -41,6 +41,8 @@ class Rings{
                 array[s].destroy();
             }
           } 
+        array=[];
+        return array;
     }
     makeSprites(num){        
         this.y=450
